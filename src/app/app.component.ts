@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'abraham-gomez';
+ 
+  stackMedic:string[] = ["Angular", "node.js", "Firebase", "Angular Material", "Google API Calendar"] 
+
+  constructor(){
+
+  }
+
+
+  
+
 }
