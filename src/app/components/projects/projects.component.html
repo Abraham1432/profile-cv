@@ -1,1 +1,47 @@
-<p>projects works!</p>
+<section class="section">
+    <div class="container">
+
+      <div class="columns">
+
+        <div class="column">
+          <div class="box">
+            <h1 class="title has-text-info-dark">MedicalBridge</h1>
+            <hr>
+            <h3 class="subtitle is-4">Proyecto para agendar consultorios especializados a médicos, gestion de citas y roles de usuarios.</h3> 
+            
+            <p>Stack tecnológico</p>
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="control" *ngFor="let stack of stackMedic">
+                <div class="tags has-addons">
+                  <span class="tag is-link">{{stack}}</span>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <a href="https://medicalbridge.com.mx" class="button is-link" target="_blank">Ir al sitio web</a>
+
+          </div>
+        </div>
+
+        <div class="column">
+            <div class="box">
+              <h1 class="title has-text-info-dark">Cobranza medica</h1>
+              <hr>
+              <h3 class="subtitle is-4">Sitio especializado en facturación a médicos y control de contabilidad</h3> 
+              
+              <p>Stack tecnológico</p>
+              <div class="field is-grouped is-grouped-multiline">
+                <div class="control" *ngFor="let stack of stackMedic2">
+                  <div class="tags has-addons">
+                    <span class="tag is-link">{{stack}}</span>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <a href="https://www.cobranzamedica.com/" class="button is-link" target="_blank">Ir al sitio web</a>
+            </div>
+          </div>
+      </div>
+
+      </div>
+    </section>

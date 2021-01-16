@@ -1,12 +1,12 @@
 <div class="columns">
 
-  <div class="column">
+  <div class="column is-narrow">
 
     <section class="hero">
       <div class="hero-body">
         <div class="container">
-            <div class="box">
-            <!-- <img class="is-square" src="../assets/images/AG.png"> -->
+            <div class="box" style="width: 400px;">
+            <img class="is-square" src="../assets/images/AG.png">
             <h1 class="title is-2">
              Abraham Gómez
             </h1>
@@ -16,13 +16,40 @@
             <h2 class="subtitle">
               JavaScript lover 💻 
             </h2>
-            <nav class="breadcrumb is-large" aria-label="breadcrumbs">
-              <ul>
-                <li class="is-active"><a href="#">Proyectos</a></li>
-                <li><a href="#" class="has-text-info-dark">Conóceme</a></li>
-                <li><a href="#" class="has-text-info-dark">habilidades</a></li>
+
+            <!-- Onlye for moviles -->
+            <aside class="menu is-hidden-desktop">
+
+              <ul class="menu-list is-boxed">
+                <li [routerLink]="['/about-me']" class="is-active"><a>
+                  <span class="icon is-small"><i class="fas fa-address-card"></i></span>
+                  Conóceme</a>
+                </li>
+                <li [routerLink]="['/projects']" ><a>
+                  <span class="icon is-small"><i class="fas fa-laptop-code" aria-hidden="true"></i></span>
+                  Proyectos</a></li>
+                <li [routerLink]="['/skills']"><a>
+                  <span class="icon is-small"><i class="fas fa-wrench" aria-hidden="true"></i></span>
+                  habilidades</a></li>
               </ul>
-            </nav>
+            </aside>
+
+            <!-- this is only for desktops and laptops screen -->
+            <div class="tabs is-centered is-boxed is-small is-hidden-touch">
+              <ul>
+                <li [routerLink]="['/about-me']" class="is-active"><a>
+                  <span class="icon is-small"><i class="fas fa-address-card"></i></span>
+                  Conóceme</a>
+                </li>
+                <li [routerLink]="['/projects']" ><a>
+                  <span class="icon is-small"><i class="fas fa-laptop-code" aria-hidden="true"></i></span>
+                  Proyectos</a></li>
+                <li [routerLink]="['/skills']"><a>
+                  <span class="icon is-small"><i class="fas fa-wrench" aria-hidden="true"></i></span>
+                  habilidades</a></li>
+              </ul>
+            </div>
+
           </div>
         </div>
       </div>
@@ -65,52 +92,9 @@
 
   </div>
 
-  <div class="column is-8">
+  <div class="column">
     
-    
-    <section class="section">
-      <div class="container">
-
-          <div class="columns">
-
-          <div class="column">
-            <div class="box">
-              <h1 class="title has-text-info-dark">MedicalBridge</h1>
-              <hr>
-              <h3 class="subtitle is-4">Proyecto para agendar consultorios especializados a médicos, gestion de citas y roles de usuarios.</h3> 
-              
-              <div class="field is-grouped is-grouped-multiline">
-                <div class="control" *ngFor="let stack of stackMedic">
-                  <div class="tags has-addons">
-                    <span class="tag is-link">{{stack}}</span>
-                  </div>
-                </div>
-              </div>
-          
-            </div>
-          </div>
-
-          <div class="column is-6">
-            <div class="box">
-              <h1 class="title has-text-info-dark">MedicalBridge</h1>
-              <hr>
-              <h3 class="subtitle is-4">Proyecto para agendar consultorios especializados a médicos, gestion de citas y roles de usuarios.</h3> 
-              
-              <div class="field is-grouped is-grouped-multiline">
-                <div class="control" *ngFor="let stack of stackMedic">
-                  <div class="tags has-addons">
-                    <span class="tag is-link">{{stack}}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-        </div>
-
-        </div>
-      </section>
-
+    <router-outlet></router-outlet>
 
   </div>
 

@@ -7,13 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  
-  stackMedic:string[] = ["Angular", "node.js", "Firebase", "Angular Material", "Google API Calendar"] 
+  menu:string = "about";
 
   constructor(){
 
   }
 
 
+  switchMenu(text:string){
+
+    this.menu = text
   
+  }
+  
+
 
 }
